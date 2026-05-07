@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CollabStream | Watch Party</title>
+  <!-- Tailwind CDN for functional classes -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base & Global Styles */
+    * {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top right, #1e1b4b, #030712);
+      color: #f8fafc;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #030712;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 10px;
+      border: 2px solid #030712;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #374151;
+    }
+
+    /* Premium Glassmorphism UI */
+    .glass-card {
+      background: rgba(17, 24, 39, 0.7) !important;
+      backdrop-filter: blur(16px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .premium-btn {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .premium-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.6);
+      filter: brightness(1.1);
+    }
+
+    .premium-btn:active {
+      transform: scale(0.95);
+    }
+
+    .input-glow:focus {
+      box-shadow: 0 0 15px rgba(79, 70, 229, 0.3);
+      border-color: #6366f1;
+    }
+
+    /* Animated Background Elements */
+    .bg-glow {
+      position: fixed;
+      width: 40vw;
+      height: 40vw;
+      background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(60px);
+    }
+
+    .yt-glow {
+      box-shadow: 0 0 40px rgba(79, 70, 229, 0.15);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg-glow top-[-10%] right-[-10%]"></div>
+  <div class="bg-glow bottom-[-10%] left-[-10%]"></div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>
